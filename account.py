@@ -44,3 +44,4 @@ class Account:
         :return: Account name
         '''
         return self.__account_name
+
