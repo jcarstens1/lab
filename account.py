@@ -1,15 +1,15 @@
 class Account:
-    def __init__(self, name):
+    def __init__(self, name: str) -> None:
         '''
-        Function to create an account with a person's name and account balance
+        Constructor to create an account with a person's name and account balance
         :param name: Account name
         '''
         self.__account_name = name
         self.__account_balance = 0
 
-    def deposit(self, amount):
+    def deposit(self, amount: int) -> bool:
         '''
-        Function to increment the account balance by the specified amount
+        Method to increment the account balance by the specified amount
         :param amount: Amount to deposit
         :return: False if deposit is unsuccessful, True if deposit is successful
         '''
@@ -19,9 +19,9 @@ class Account:
             self.__account_balance += amount
             return True
 
-    def withdraw(self, amount):
+    def withdraw(self, amount: int) -> bool:
         '''
-        Function to decrement the account balance by the specified amount
+        Method to decrement the account balance by the specified amount
         :param amount: Amount to withdrawal
         :return: False if withdrawal is unsuccessful, True if withdrawal is successful
         '''
@@ -31,16 +31,16 @@ class Account:
             self.__account_balance -= amount
             return True
 
-    def get_balance(self):
+    def get_balance(self) -> int:
         '''
-        Function to return the account balance
+        Method to return the account balance
         :return: Account balance
         '''
         return self.__account_balance
 
-    def get_name(self):
+    def get_name(self) -> str:
         '''
-        Function to return the account name
+        Method to return the account name
         :return: Account name
         '''
         return self.__account_name
